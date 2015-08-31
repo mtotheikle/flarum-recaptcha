@@ -1,0 +1,16 @@
+{
+    "name": "GoogleReCaptcha",
+    "title": "Google reCAPTCHA",
+    "description": null,
+    "keywords": [],
+    "version": "0.1.0",
+    "author": {
+        "name": "Michael Williams",
+        "email": "mtotheikle@gmail.com"
+    },
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "flarum": ">0.1.0"
+    }
+}

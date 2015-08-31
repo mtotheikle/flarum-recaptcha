@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "FlarumExtensions\\": "src/"
+        }
+    },
+    "require": {
+        "google/recaptcha": "~1.1"
+    }
+}
