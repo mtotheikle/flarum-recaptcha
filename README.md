@@ -4,7 +4,11 @@
 
 ## How to install
 
-[Download the latest release](https://github.com/s9e/flarum-ext-mediaembed/releases/latest). Unzip the archive into the `extensions` directory of your Flarum installation. Then go to the admin panel to enable the extension and configure the settings.
+[Download the latest release](https://github.com/mtotheikle/flarum-recaptcha/releases/latest). Unzip the archive into the `extensions` directory of your Flarum installation. Then go to the admin panel to enable the extension and configure the settings.
+
+## Example
+
+<img src="https://github.com/mtotheikle/flarum-recaptcha/blob/master/img/SignupWithCaptcha.png" height=524px />
 
 ## Version
 - 0.1.0 (Build 1)
