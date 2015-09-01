@@ -1,6 +1,15 @@
-# Flarum reCAPTCHA
+# Flarum reCAPTCHA Extension
 
-* This plugin integrates with Google reCAPTCHA service
-* This plugin is still a work in progress and is currently missing admin controls
-* After cloning this repo, you will need to modify js/forum/src/main.js and place your site key in the correct location.
-* You must also modify FlarumExtensions\Listeners\ValidateCaptcha to add your private key
+* This plugin integrates with the Google reCAPTCHA service by adding a CAPTCHA to your signup form
+
+## How to install
+
+[Download the latest release](https://github.com/s9e/flarum-ext-mediaembed/releases/latest). Unzip the archive into the `extensions` directory of your Flarum installation. Then go to the admin panel to enable the extension and configure the settings.
+
+## Version
+- 0.1.0 (Build 1)
+- Released on August 31st, 2015
+- Compatible with [Flarum 0.1.0-beta] (https://github.com/flarum/flarum/tree/v0.1.0-beta)
+
+## License
+Released under the MIT License. Please see the [LICENSE] (https://github.com/mtotheikle/flarum-recaptcha/blob/master/LICENSE) file.
