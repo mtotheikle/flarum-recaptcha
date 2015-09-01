@@ -8,6 +8,7 @@ class Extension extends BaseExtension
     public function listen(Dispatcher $events)
     {
         $events->subscribe('FlarumExtensions\Listeners\AddClientAssets');
+        $events->subscribe('FlarumExtensions\Listeners\AddApiAttributes');
     }
 
     public function boot()

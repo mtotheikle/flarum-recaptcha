@@ -15,9 +15,8 @@ app.initializers.add('GoogleReCaptcha', () => {
 
     if (this.$('#Recaptcha').children().length) return;
 
-    //app.forum.attribute('apiUrl')
     widgetId = grecaptcha.render('Recaptcha', {
-      'sitekey': 'XXX'
+      'sitekey': app.forum.attribute('googleReCaptchaSiteKey')
     });
   }
 

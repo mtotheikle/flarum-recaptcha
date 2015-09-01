@@ -6,11 +6,21 @@ use Flarum\Events\UserWillBeSaved;
 use Illuminate\Contracts\Events\Dispatcher;
 use ReCaptcha\ReCaptcha;
 
+/**
+ * @author Michael Williams <mtotheikle@gmail.com>
+ */
 class ValidateCaptcha
 {
     private $registeringUser;
     private $captchaResponse;
 
+    /**
+     * Handle incoming commands checking for the registration command
+     *
+     * @param $command
+     * @param $next
+     * @return mixed
+     */
     public function handle($command, $next)
     {
         if ($command instanceof RegisterUser) {
@@ -24,6 +34,11 @@ class ValidateCaptcha
         return $next($command);
     }
 
+    /**
+     * Store reference to user that is registering so we can cross check later
+     *
+     * @param UserWillBeSaved $user
+     */
     public function userSaving(UserWillBeSaved $user)
     {
         $this->registeringUser = $user->user;
@@ -39,7 +54,7 @@ class ValidateCaptcha
 
         $validator->validator->addExtension('recaptcha', function($attribute, $value, $parameters) {
 
-            $recaptcha = new ReCaptcha("TODO");
+            $recaptcha = new ReCaptcha(app('Flarum\Core\Settings\SettingsRepository')->get('google_recaptcha.secret_key'));
             $resp = $recaptcha->verify($this->captchaResponse);
             if ($resp->isSuccess()) {
                 // verified!
@@ -59,5 +74,9 @@ class ValidateCaptcha
 
         $validator->validator->setData($data);
         $validator->validator->setRules($rules);
+
+        // clear user reference for good measures
+        // will cause above check to fail later, therefore causing no validation in subsequent calls
+        $this->registeringUser = null;
     }
 }
