@@ -1,9 +1,9 @@
 {
     "name": "recaptcha",
     "title": "Google reCAPTCHA",
-    "description": null,
+    "description": "Stop registration spam by using the Google reCAPTCHA service",
     "keywords": [],
-    "version": "0.1.1",
+    "version": "0.1.0",
     "author": {
         "name": "Michael Williams",
         "email": "mtotheikle@gmail.com"
@@ -12,5 +12,10 @@
     "require": {
         "php": ">=5.4.0",
         "flarum": ">0.1.0"
+    },
+    "icon": {
+        "name": "lock",
+        "backgroundColor": "#148E81",
+        "color": "#fff"
     }
 }
