@@ -1,9 +1,9 @@
 {
-    "name": "GoogleReCaptcha",
+    "name": "recaptcha",
     "title": "Google reCAPTCHA",
     "description": null,
     "keywords": [],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Michael Williams",
         "email": "mtotheikle@gmail.com"

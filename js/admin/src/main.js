@@ -1,8 +1,8 @@
 import { extend } from 'flarum/extend';
 import app from 'flarum/app';
 
-import GoogleReCaptchaSettingsModal from 'GoogleReCaptcha/components/GoogleReCaptchaSettingsModal';
+import RecaptchaSettingsModal from 'recaptcha/components/RecaptchaSettingsModal';
 
-app.initializers.add('GoogleReCaptcha', () => {
-  app.extensionSettings.GoogleReCaptcha = () => app.modal.show(new GoogleReCaptchaSettingsModal());
+app.initializers.add('recaptcha', () => {
+  app.extensionSettings.recaptcha = () => app.modal.show(new RecaptchaSettingsModal());
 });

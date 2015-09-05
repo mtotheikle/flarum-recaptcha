@@ -7,4 +7,4 @@ require __DIR__.'/vendor/autoload.php';
 // Return the name of our Extension class. Flarum will register it as a service
 // provider, allowing it to register bindings and execute code when the
 // application boots.
-return 'FlarumExtensions\Extension';
+return 'Flarum\Recaptcha\Extension';

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8cb55a2a56922d906e2f2de7ef4d5f56",
+    "hash": "31f5b73df751ebe4ddc8923e299ee457",
     "packages": [
         {
             "name": "google/recaptcha",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/recaptcha.git",
-                "reference": "090585935d95ebdf2d16dd071b10c9179a94da47"
+                "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/recaptcha/zipball/090585935d95ebdf2d16dd071b10c9179a94da47",
-                "reference": "090585935d95ebdf2d16dd071b10c9179a94da47",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/2b7e00566afca82a38a1d3adb8e42c118006296e",
+                "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "recaptcha",
                 "spam"
             ],
-            "time": "2015-03-16 13:45:08"
+            "time": "2015-09-02 17:23:59"
         }
     ],
     "packages-dev": [],

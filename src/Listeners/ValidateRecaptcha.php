@@ -1,4 +1,4 @@
-<?php namespace FlarumExtensions\Listeners;
+<?php namespace Flarum\Recaptcha\Listeners;
 
 use Flarum\Core\Users\Commands\RegisterUser;
 use Flarum\Events\ModelValidator;
@@ -54,7 +54,7 @@ class ValidateCaptcha
 
         $validator->validator->addExtension('recaptcha', function($attribute, $value, $parameters) {
 
-            $recaptcha = new ReCaptcha(app('Flarum\Core\Settings\SettingsRepository')->get('google_recaptcha.secret_key'));
+            $recaptcha = new ReCaptcha(app('Flarum\Core\Settings\SettingsRepository')->get('recaptcha.secret_key'));
             $resp = $recaptcha->verify($this->captchaResponse);
             if ($resp->isSuccess()) {
                 // verified!

@@ -2,6 +2,6 @@ var gulp = require('flarum-gulp');
 
 gulp({
   modules: {
-    'GoogleReCaptcha': 'src/**/*.js'
+    'recaptcha': 'src/**/*.js'
   }
 });

@@ -1,4 +1,4 @@
-<?php namespace FlarumExtensions\Listeners;
+<?php namespace Flarum\Recaptcha\Listeners;
 
 use Flarum\Events\RegisterLocales;
 use Flarum\Events\BuildClientView;
@@ -24,10 +24,10 @@ class AddClientAssets
             __DIR__.'/../../less/forum/extension.less'
         ]);
 
-        $event->forumBootstrapper('GoogleReCaptcha/main');
+        $event->forumBootstrapper('recaptcha/main');
 
         $event->forumTranslations([
-            // 'GoogleReCaptcha.hello_world'
+            // 'recaptcha.hello_world'
         ]);
 
         $event->adminAssets([
@@ -35,10 +35,10 @@ class AddClientAssets
             __DIR__.'/../../less/admin/extension.less'
         ]);
 
-        $event->adminBootstrapper('GoogleReCaptcha/main');
+        $event->adminBootstrapper('recaptcha/main');
 
         $event->adminTranslations([
-            // 'GoogleReCaptcha.hello_world'
+            // 'recaptcha.hello_world'
         ]);
     }
 }

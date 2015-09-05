@@ -1,4 +1,4 @@
-<?php namespace FlarumExtensions\Listeners;
+<?php namespace Flarum\Recaptcha\Listeners;
 
 use Flarum\Events\ApiAttributes;
 use Flarum\Events\RegisterApiRoutes;
@@ -15,7 +15,7 @@ class AddApiAttributes
     public function addAttributes(ApiAttributes $event)
     {
         if ($event->serializer instanceof ForumSerializer) {
-            $event->attributes['googleReCaptchaSiteKey'] = app('Flarum\Core\Settings\SettingsRepository')->get('google_recaptcha.site_key');
+            $event->attributes['recaptchaSiteKey'] = app('Flarum\Core\Settings\SettingsRepository')->get('recaptcha.site_key');
         }
     }
 }

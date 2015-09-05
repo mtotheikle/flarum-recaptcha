@@ -5,7 +5,7 @@ import SignUpModal from 'flarum/components/SignUpModal';
 import ModalManager from 'flarum/components/ModalManager';
 import LoadingIndicator from 'flarum/components/LoadingIndicator';
 
-app.initializers.add('GoogleReCaptcha', () => {
+app.initializers.add('recaptcha', () => {
 
   let scriptLoaded = false;
   let widgetId = -1;
@@ -16,7 +16,7 @@ app.initializers.add('GoogleReCaptcha', () => {
     if (this.$('#Recaptcha').children().length) return;
 
     widgetId = grecaptcha.render('Recaptcha', {
-      'sitekey': app.forum.attribute('googleReCaptchaSiteKey')
+      'sitekey': app.forum.attribute('recaptchaSiteKey')
     });
   }
 
@@ -51,7 +51,7 @@ app.initializers.add('GoogleReCaptcha', () => {
   })
 
   override(SignUpModal.prototype, 'body', function(original) {
-    // TODO If loading captcha files fails then we should show error after x time
+    // TODO If loading recaptcha files fails then we should show error after x time
 
     // must wait until we have captcha loaded
     if (false == scriptLoaded) return LoadingIndicator.component({className: 'LoadingIndicator--block'});
