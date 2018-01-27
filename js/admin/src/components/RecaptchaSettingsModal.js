@@ -6,7 +6,6 @@ export default class RecaptchaSettingsModal extends Modal {
   constructor(...args) {
     super(...args);
 
-    debugger;
     this.siteKey = m.prop(app.config['recaptcha.site_key'] || '');
     this.secretKey = m.prop(app.config['recaptcha.secret_key'] || '');
   }
